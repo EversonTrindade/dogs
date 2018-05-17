@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct DogsDTO {
+    var token = ""
+}

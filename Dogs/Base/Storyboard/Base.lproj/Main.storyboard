@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dogs View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dogs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DogsViewController" customModule="Dogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,24 +59,40 @@
             </objects>
             <point key="canvasLocation" x="-591" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="lp0-XC-snl">
             <objects>
-                <viewController id="soN-6H-d1B" sceneMemberID="viewController">
+                <viewController id="soN-6H-d1B" customClass="LoginViewController" customModule="Dogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BTV-oe-IZL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2e8-na-6bV">
+                                <rect key="frame" x="38" y="110" width="299" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wg1-O4-FPe"/>
                     </view>
-                    <navigationItem key="navigationItem" id="e0R-Tc-LQX"/>
+                    <navigationItem key="navigationItem" id="e0R-Tc-LQX">
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="hWS-WV-VTp">
+                            <connections>
+                                <action selector="loginAction:" destination="soN-6H-d1B" id="4Yr-mI-j7c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="b2h-fr-d5V"/>
+                        <outlet property="emailTextField" destination="2e8-na-6bV" id="2BX-HP-PpY"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueToDogs" id="b2h-fr-d5V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBS-yP-J72" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="202" y="134"/>
+            <point key="canvasLocation" x="200.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

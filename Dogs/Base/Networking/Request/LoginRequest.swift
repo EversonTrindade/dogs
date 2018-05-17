@@ -21,6 +21,7 @@ class LoginRequest: Requestable {
         
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
         URLSession.shared.dataTask(with: request) { data, response, error  in
             if let error = error {
                 completion(nil, CustomError(error: error.localizedDescription as? Error))

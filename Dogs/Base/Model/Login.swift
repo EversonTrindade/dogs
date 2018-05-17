@@ -9,6 +9,10 @@
 import Foundation
 
 struct Login: Decodable {
+    var user: User
+}
+
+struct User: Decodable {
     var _id: String
     var token: String
     var createdAt: String

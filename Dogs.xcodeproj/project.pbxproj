@@ -26,6 +26,8 @@
 		4069F00320ACBB67001B564F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F00220ACBB67001B564F /* Login.swift */; };
 		4069F00520ACBB77001B564F /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F00420ACBB77001B564F /* Dog.swift */; };
 		4069F00820ACBD18001B564F /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F00720ACBD18001B564F /* Error+Extension.swift */; };
+		4069F00A20ADAC9C001B564F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F00920ADAC9C001B564F /* UIViewController+Extension.swift */; };
+		4069F00C20ADAFCC001B564F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F00B20ADAFCB001B564F /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		4069F00220ACBB67001B564F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		4069F00420ACBB77001B564F /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		4069F00720ACBD18001B564F /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
+		4069F00920ADAC9C001B564F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4069F00B20ADAFCB001B564F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				4069F00720ACBD18001B564F /* Error+Extension.swift */,
+				4069F00920ADAC9C001B564F /* UIViewController+Extension.swift */,
+				4069F00B20ADAFCB001B564F /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4069F00A20ADAC9C001B564F /* UIViewController+Extension.swift in Sources */,
 				4069EFFB20ACBA34001B564F /* DetailViewController.swift in Sources */,
 				4069EFFF20ACBA94001B564F /* LoginInteractor.swift in Sources */,
 				4069F00320ACBB67001B564F /* Login.swift in Sources */,
@@ -339,6 +346,7 @@
 				4069F00820ACBD18001B564F /* Error+Extension.swift in Sources */,
 				4069EFC220ACB20B001B564F /* AppDelegate.swift in Sources */,
 				4069EFFD20ACBA42001B564F /* DetailViewModel.swift in Sources */,
+				4069F00C20ADAFCC001B564F /* String+Extension.swift in Sources */,
 				4069EFF520ACB9FA001B564F /* LoginViewModel.swift in Sources */,
 				4069EFEE20ACB744001B564F /* DogRequest.swift in Sources */,
 				4069F00520ACBB77001B564F /* Dog.swift in Sources */,

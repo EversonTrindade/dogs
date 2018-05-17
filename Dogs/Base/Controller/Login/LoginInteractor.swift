@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+protocol LoginInteractorPresentable: class {
+    func login(param: [String : String], completion: @escaping (_ object: Login?, _ error: String?) -> ())
+}
+
+class LoginInteractor: LoginInteractorPresentable {
+    func login(param: [String : String], completion: @escaping (_ object: Login?, _ error: String?) -> ()) {
+        LoginRequest().request(param: param) { result, error in
+            completion(result ?? nil, error?.message)
+        }
+    }
+}
