@@ -9,5 +9,6 @@
 import Foundation
 
 struct Dogs: Decodable {
-    
+    var category: String
+    var list: [String]
 }

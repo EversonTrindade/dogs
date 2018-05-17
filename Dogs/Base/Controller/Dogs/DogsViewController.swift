@@ -9,15 +9,45 @@
 import UIKit
 
 class DogsViewController: UIViewController {
-
-    private var dogsDTO = DogsDTO()
     
+    // MARK: IBOutlet
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: Properties
+    private var dogsDTO = DogsDTO()
+    lazy var viewModel: DogsViewModelPresentable = DogsViewModel()
+
+    
+    // MARK: ViewController life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(dogsDTO.token)
     }
     
+    // MARK: Functions
     func fill(dogsDTO: DogsDTO) {
         self.dogsDTO = dogsDTO
+    }
+}
+
+// MARK: UITableViewDelegate/UITableViewDataSource
+extension DogsViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSections()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSection()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DogsCell", for: indexPath) as? DogsCell else {
+            return UITableViewCell()
+        }
+        cell.fillCell(token: dogsDTO.token, index: indexPath.row)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.heightForRow()
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DogRequest: Requestable {
+class DogsRequest: Requestable {
     
     func request(param: [String : Any], completion: @escaping ( Dogs?, CustomError?) -> Void) {
         var urlComponents = URLComponents(string: BaseAPI().feed)

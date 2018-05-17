@@ -6,8 +6,35 @@
 //  Copyright © 2018 Everson Trindade. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct DogsDTO {
     var token = ""
+}
+
+protocol DogsViewModelPresentable: class {
+    func numberOfSections() -> Int
+    func numberOfRowsInSection() -> Int
+    func heightForRow() -> CGFloat
+}
+
+class DogsViewModel: DogsViewModelPresentable {
+    
+    // MARK: Init
+    init() { }
+}
+
+// MARK: TableViewDTO
+extension DogsViewModel {
+    func numberOfSections() -> Int {
+        return 1
+    }
+    
+    func numberOfRowsInSection() -> Int {
+        return 4
+    }
+    
+    func heightForRow() -> CGFloat {
+        return 225.0
+    }
 }

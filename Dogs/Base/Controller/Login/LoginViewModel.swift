@@ -19,15 +19,11 @@ protocol LoginViewModelPresentable: class {
 class LoginViewModel: LoginViewModelPresentable {
     
     // MARK: Properties
-    weak var loginLoadContent: LoginLoadContent?
+    private weak var loginLoadContent: LoginLoadContent?
     var interactor: LoginInteractorPresentable?
     
     // MARK: Init
-    init() {
-        
-    }
-    
-    init(loginLoadContent: LoginLoadContent, interactor: LoginInteractorPresentable = LoginInteractor()) {
+    init(loginLoadContent: LoginLoadContent?, interactor: LoginInteractorPresentable? = LoginInteractor()) {
         self.loginLoadContent = loginLoadContent
         self.interactor = interactor
     }
