@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol DogsLoadContent: class {
     func didLoadContent(error: String?)
+    func didLoadImage(identifier: String?)
 }
 
 protocol DogsCellModelPresentable: class {
@@ -17,6 +19,8 @@ protocol DogsCellModelPresentable: class {
     func getDogs(category: String, token: String)
     func numberOfSections() -> Int
     func numberOfRowsInSection() -> Int
+    func imageFromCache(identifier: String) -> UIImage?
+    func dogDTO(row: Int) -> DogCellDTO
 }
 
 class DogsCellModel: DogsCellModelPresentable {
@@ -26,6 +30,7 @@ class DogsCellModel: DogsCellModelPresentable {
     var interactor: DogsInteractorPresentable?
     let categories = ["husky", "hound", "pug", "labrador"]
     var dog: Dogs?
+    private var cache = NSCache<NSString, UIImage>()
     
     // MARK: Init
     init() { }
@@ -52,6 +57,41 @@ class DogsCellModel: DogsCellModelPresentable {
         return categories.object(index: index)
     }
 
+    func getImage(urlString: String) -> UIImage {
+        let placeholder = UIImage(named: "icon-placeholder")
+        placeholder?.accessibilityIdentifier = "placeholder"
+        if urlString.isEmpty {
+            cache.setObject(placeholder ?? UIImage(), forKey: NSString(string: urlString))
+        }
+        
+        if let cachedImage = cache.object(forKey: NSString(string: urlString)) {
+            return cachedImage
+        }
+        
+        if let url = URL(string: urlString) {
+            URLSession.shared.dataTask(with: url, completionHandler: { data, _, _ in
+                if let data = data, let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self.cache.setObject(image, forKey: NSString(string: urlString))
+                        self.dogsLoadContent?.didLoadImage(identifier: urlString)
+                    }
+                }
+            }).resume()
+        }
+        return UIImage()
+    }
+    
+    func imageFromCache(identifier: String) -> UIImage? {
+        return cache.object(forKey: NSString(string: identifier))
+    }
+    
+    func dogDTO(row: Int) -> DogCellDTO {
+        guard let dog = dog?.list else {
+            return DogCellDTO()
+        }
+        return DogCellDTO(identifier: dog.object(index: row) ?? "",
+                          image: getImage(urlString: dog.object(index: row) ?? ""))
+    }
 }
 
 extension DogsCellModel {

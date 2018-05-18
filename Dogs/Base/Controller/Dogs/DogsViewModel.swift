@@ -35,6 +35,6 @@ extension DogsViewModel {
     }
     
     func heightForRow() -> CGFloat {
-        return 225.0
+        return 180.0
     }
 }

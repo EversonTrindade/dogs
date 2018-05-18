@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol DogImageDelegate: class {
+    func getDogImageView(image: UIImage?)
+}
+
 class DogsCell: UITableViewCell, DogsLoadContent {
 
     // MARK: Properties
     private var dogsDTO = DogsDTO()
     lazy var viewModel: DogsCellModelPresentable = DogsCellModel(loadContent: self)
+    weak var dogImageDelegate: DogImageDelegate?
     
     // MARK: IBOutlet
     @IBOutlet weak var categoryLbl: UILabel!
@@ -26,7 +31,7 @@ class DogsCell: UITableViewCell, DogsLoadContent {
     }
     
     func fillCell(token: String, index: Int) {
-        categoryLbl.text = viewModel.getCategoryName(index: index)
+        categoryLbl.text = viewModel.getCategoryName(index: index)?.uppercased()
         viewModel.getDogs(category: viewModel.getCategoryName(index: index) ?? "", token: token)
     }
     
@@ -35,6 +40,20 @@ class DogsCell: UITableViewCell, DogsLoadContent {
         } else {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    func didLoadImage(identifier: String?) {
+        DispatchQueue.main.async {
+            guard let collection = self.collectionView else {
+                return
+            }
+            for cell in collection.visibleCells {
+                if let dogCell = cell as? DogCell, dogCell.identifier == identifier {
+                    dogCell.setImage(with: self.viewModel.imageFromCache(identifier: identifier ?? ""))
+                    self.collectionView.reloadData()
+                }
             }
         }
     }
@@ -53,7 +72,17 @@ extension DogsCell: UICollectionViewDelegate, UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogCell", for: indexPath) as? DogCell else {
             return UICollectionViewCell()
         }
+        cell.fillCell(dto: viewModel.dogDTO(row: indexPath.row))
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let gameCell = cell as? DogCell {
+            gameCell.fillCell(dto: viewModel.dogDTO(row: indexPath.row))
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        dogImageDelegate?.getDogImageView(image: viewModel.dogDTO(row: indexPath.row).image)
+    }
 }

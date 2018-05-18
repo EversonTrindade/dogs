@@ -9,61 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dogs/Base/Networking/Request/DogsRequest.swift"
-            timestampString = "548277204.870399"
+            filePath = "Dogs/Base/Controller/Dogs/Components/DogsCell.swift"
+            timestampString = "548298409.057525"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "request(param:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Dogs.DogsRequest.request(param: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;Dogs.Dogs&gt;, Swift.Optional&lt;Dogs.CustomError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Everson/Git/Dogs/Dogs/Base/Networking/Request/DogsRequest.swift"
-                  timestampString = "548269231.270313"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "2023">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Dogs.DogsRequest.request(param: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;Dogs.Dogs&gt;, Swift.Optional&lt;Dogs.CustomError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Everson/Git/Dogs/Dogs/Base/Networking/Request/DogsRequest.swift"
-                  timestampString = "548269231.281431"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "75">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dogs/Base/Networking/Request/DogsRequest.swift"
-            timestampString = "548277204.870688"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "request(param:completion:)"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "collectionView(_:willDisplay:forItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dogs/Base/Networking/Request/DogsRequest.swift"
-            timestampString = "548277204.8708121"
+            filePath = "Dogs/Base/Controller/Dogs/Components/DogsCell.swift"
+            timestampString = "548298409.097206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "request(param:completion:)"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,29 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dogs/Base/Networking/Request/DogsRequest.swift"
-            timestampString = "548277204.870961"
+            filePath = "Dogs/Base/Controller/Dogs/Components/DogsCell.swift"
+            timestampString = "548298409.098339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "request(param:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dogs/Base/Controller/Dogs/DogsViewController.swift"
-            timestampString = "548277204.871145"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

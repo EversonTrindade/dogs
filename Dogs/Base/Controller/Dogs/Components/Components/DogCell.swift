@@ -8,14 +8,25 @@
 
 import UIKit
 
-struct DogDTO {
-    var image = ""
+struct DogCellDTO {
+    var identifier = ""
+    var image: UIImage?
 }
 
 class DogCell: UICollectionViewCell {
+    
     @IBOutlet weak var dogImage: UIImageView!
     
-    func fillCell(dto: DogDTO) {
-        print(dto.image)
+    var identifier = ""
+    
+    func fillCell(dto: DogCellDTO) {
+        self.identifier = dto.identifier
+        dogImage.image = dto.image
+        dogImage.setRounded()
+    }
+    
+    func setImage(with image: UIImage?) {
+        dogImage.image = image
+        dogImage.setRounded()
     }
 }

@@ -20,7 +20,6 @@
 		4069EFF720ACBA10001B564F /* DogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069EFF620ACBA10001B564F /* DogsViewController.swift */; };
 		4069EFF920ACBA21001B564F /* DogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069EFF820ACBA21001B564F /* DogsViewModel.swift */; };
 		4069EFFB20ACBA34001B564F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069EFFA20ACBA34001B564F /* DetailViewController.swift */; };
-		4069EFFD20ACBA42001B564F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069EFFC20ACBA42001B564F /* DetailViewModel.swift */; };
 		4069EFFF20ACBA94001B564F /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069EFFE20ACBA94001B564F /* LoginInteractor.swift */; };
 		4069F00120ACBAAE001B564F /* DogsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F00020ACBAAE001B564F /* DogsInteractor.swift */; };
 		4069F00320ACBB67001B564F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F00220ACBB67001B564F /* Login.swift */; };
@@ -32,6 +31,7 @@
 		4069F01120ADDB07001B564F /* DogsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F01020ADDB07001B564F /* DogsCellModel.swift */; };
 		4069F01320ADDF88001B564F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F01220ADDF88001B564F /* Array+Extension.swift */; };
 		4069F01620ADFF56001B564F /* DogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F01520ADFF56001B564F /* DogCell.swift */; };
+		4069F01820AE0D43001B564F /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F01720AE0D43001B564F /* Image+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 		4069EFF620ACBA10001B564F /* DogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsViewController.swift; sourceTree = "<group>"; };
 		4069EFF820ACBA21001B564F /* DogsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsViewModel.swift; sourceTree = "<group>"; };
 		4069EFFA20ACBA34001B564F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		4069EFFC20ACBA42001B564F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4069EFFE20ACBA94001B564F /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		4069F00020ACBAAE001B564F /* DogsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsInteractor.swift; sourceTree = "<group>"; };
 		4069F00220ACBB67001B564F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		4069F01020ADDB07001B564F /* DogsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsCellModel.swift; sourceTree = "<group>"; };
 		4069F01220ADDF88001B564F /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		4069F01520ADFF56001B564F /* DogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCell.swift; sourceTree = "<group>"; };
+		4069F01720AE0D43001B564F /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				4069EFFA20ACBA34001B564F /* DetailViewController.swift */,
-				4069EFFC20ACBA42001B564F /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -242,6 +241,7 @@
 				4069F00920ADAC9C001B564F /* UIViewController+Extension.swift */,
 				4069F00B20ADAFCB001B564F /* String+Extension.swift */,
 				4069F01220ADDF88001B564F /* Array+Extension.swift */,
+				4069F01720AE0D43001B564F /* Image+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,8 +375,8 @@
 				4069EFEC20ACB729001B564F /* LoginRequest.swift in Sources */,
 				4069F00820ACBD18001B564F /* Error+Extension.swift in Sources */,
 				4069EFC220ACB20B001B564F /* AppDelegate.swift in Sources */,
-				4069EFFD20ACBA42001B564F /* DetailViewModel.swift in Sources */,
 				4069F00C20ADAFCC001B564F /* String+Extension.swift in Sources */,
+				4069F01820AE0D43001B564F /* Image+Extension.swift in Sources */,
 				4069EFF520ACB9FA001B564F /* LoginViewModel.swift in Sources */,
 				4069F01320ADDF88001B564F /* Array+Extension.swift in Sources */,
 				4069EFEE20ACB744001B564F /* DogsRequest.swift in Sources */,
