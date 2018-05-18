@@ -29,7 +29,6 @@ class DetailViewController: UIViewController {
     
     func fill(dto: DetailDTO?) {
         self.image = dto?.image
-        
         navigationItem.title = dto?.name.uppercased()
     }
 }

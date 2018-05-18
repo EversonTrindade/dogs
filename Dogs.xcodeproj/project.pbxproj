@@ -33,6 +33,14 @@
 		4069F01620ADFF56001B564F /* DogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F01520ADFF56001B564F /* DogCell.swift */; };
 		4069F01820AE0D43001B564F /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F01720AE0D43001B564F /* Image+Extension.swift */; };
 		408A0B8C20AE8338002D2F14 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B8B20AE8338002D2F14 /* Reachability.swift */; };
+		408A0B9020AE85D1002D2F14 /* LoginModalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B8F20AE85D1002D2F14 /* LoginModalTests.swift */; };
+		408A0B9220AE861C002D2F14 /* DogsModalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B9120AE861C002D2F14 /* DogsModalTests.swift */; };
+		408A0B9420AE87E5002D2F14 /* MockedLogin.json in Resources */ = {isa = PBXBuildFile; fileRef = 408A0B9320AE87E5002D2F14 /* MockedLogin.json */; };
+		408A0B9A20AE8F60002D2F14 /* DogsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B9920AE8F60002D2F14 /* DogsViewModelTests.swift */; };
+		408A0B9B20AE8FE3002D2F14 /* MockedLogin.json in Resources */ = {isa = PBXBuildFile; fileRef = 408A0B9320AE87E5002D2F14 /* MockedLogin.json */; };
+		408A0B9D20AE9149002D2F14 /* MockedDogs.json in Resources */ = {isa = PBXBuildFile; fileRef = 408A0B9C20AE9149002D2F14 /* MockedDogs.json */; };
+		408A0B9E20AE9149002D2F14 /* MockedDogs.json in Resources */ = {isa = PBXBuildFile; fileRef = 408A0B9C20AE9149002D2F14 /* MockedDogs.json */; };
+		408A0BA020AE944F002D2F14 /* DogCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B9F20AE944F002D2F14 /* DogCellModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +84,12 @@
 		4069F01520ADFF56001B564F /* DogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCell.swift; sourceTree = "<group>"; };
 		4069F01720AE0D43001B564F /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		408A0B8B20AE8338002D2F14 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		408A0B8F20AE85D1002D2F14 /* LoginModalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModalTests.swift; sourceTree = "<group>"; };
+		408A0B9120AE861C002D2F14 /* DogsModalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsModalTests.swift; sourceTree = "<group>"; };
+		408A0B9320AE87E5002D2F14 /* MockedLogin.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockedLogin.json; sourceTree = "<group>"; };
+		408A0B9920AE8F60002D2F14 /* DogsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsViewModelTests.swift; sourceTree = "<group>"; };
+		408A0B9C20AE9149002D2F14 /* MockedDogs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockedDogs.json; sourceTree = "<group>"; };
+		408A0B9F20AE944F002D2F14 /* DogCellModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCellModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +141,8 @@
 		4069EFD520ACB212001B564F /* DogsTests */ = {
 			isa = PBXGroup;
 			children = (
+				408A0B8E20AE859B002D2F14 /* Model */,
+				408A0B8D20AE8594002D2F14 /* ViewModel */,
 				4069EFD620ACB212001B564F /* DogsTests.swift */,
 				4069EFD820ACB212001B564F /* Info.plist */,
 			);
@@ -137,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				408A0B8B20AE8338002D2F14 /* Reachability.swift */,
+				408A0B9C20AE9149002D2F14 /* MockedDogs.json */,
+				408A0B9320AE87E5002D2F14 /* MockedLogin.json */,
 				4069F00620ACBCFD001B564F /* Extensions */,
 				4069EFCD20ACB212001B564F /* Info.plist */,
 				4069EFC820ACB212001B564F /* Assets.xcassets */,
@@ -268,6 +286,24 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		408A0B8D20AE8594002D2F14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				408A0B9920AE8F60002D2F14 /* DogsViewModelTests.swift */,
+				408A0B9F20AE944F002D2F14 /* DogCellModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		408A0B8E20AE859B002D2F14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				408A0B8F20AE85D1002D2F14 /* LoginModalTests.swift */,
+				408A0B9120AE861C002D2F14 /* DogsModalTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,9 +385,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408A0B9B20AE8FE3002D2F14 /* MockedLogin.json in Resources */,
 				4069EFCC20ACB212001B564F /* LaunchScreen.storyboard in Resources */,
 				4069EFC920ACB212001B564F /* Assets.xcassets in Resources */,
 				4069EFC720ACB20B001B564F /* Main.storyboard in Resources */,
+				408A0B9D20AE9149002D2F14 /* MockedDogs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +397,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408A0B9420AE87E5002D2F14 /* MockedLogin.json in Resources */,
+				408A0B9E20AE9149002D2F14 /* MockedDogs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +438,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408A0B9220AE861C002D2F14 /* DogsModalTests.swift in Sources */,
 				4069EFD720ACB212001B564F /* DogsTests.swift in Sources */,
+				408A0B9020AE85D1002D2F14 /* LoginModalTests.swift in Sources */,
+				408A0B9A20AE8F60002D2F14 /* DogsViewModelTests.swift in Sources */,
+				408A0BA020AE944F002D2F14 /* DogCellModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +632,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WKCP7ABWCG;
 				INFOPLIST_FILE = DogsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -608,6 +653,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WKCP7ABWCG;
 				INFOPLIST_FILE = DogsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='DogsTests.xctest' tests='10' failures='0'>
+  <testsuite name='DogsTests.DogCellModelTests' tests='3' failures='0'>
+    <testcase classname='DogsTests.DogCellModelTests' name='testShouldValidateGetCategoryName' time='0.013'/>
+    <testcase classname='DogsTests.DogCellModelTests' name='testShouldValidateNumberOfRowsInSection' time='0.036'/>
+    <testcase classname='DogsTests.DogCellModelTests' name='testShouldValidateNumberOfSections' time='0.001'/>
+  </testsuite>
+  <testsuite name='DogsTests.DogsModalTests' tests='1' failures='0'>
+    <testcase classname='DogsTests.DogsModalTests' name='testShouldValidateLoginResult' time='0.002'/>
+  </testsuite>
+  <testsuite name='DogsTests.DogsTests' tests='2' failures='0'>
+    <testcase classname='DogsTests.DogsTests' name='testExample' time='0.001'/>
+    <testcase classname='DogsTests.DogsTests' name='testPerformanceExample' time='0.755'/>
+  </testsuite>
+  <testsuite name='DogsTests.DogsViewModelTests' tests='3' failures='0'>
+    <testcase classname='DogsTests.DogsViewModelTests' name='testShouldValidateheightForRow' time='0.001'/>
+    <testcase classname='DogsTests.DogsViewModelTests' name='testShouldValidateNumberOfRows' time='0.001'/>
+    <testcase classname='DogsTests.DogsViewModelTests' name='testShouldValidateNumberOfSections' time='0.002'/>
+  </testsuite>
+  <testsuite name='DogsTests.LoginModalTests' tests='1' failures='0'>
+    <testcase classname='DogsTests.LoginModalTests' name='testShouldValidateLoginResult' time='0.006'/>
+  </testsuite>
+</testsuites>

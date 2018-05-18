@@ -30,7 +30,7 @@ class DogsCellModel: DogsCellModelPresentable {
     // MARK: Properties
     weak var dogsLoadContent: DogsLoadContent?
     var interactor: DogsInteractorPresentable?
-    let categories = ["husky", "hound", "pug", "labrador"]
+    var categories = ["husky", "hound", "pug", "labrador"]
     var dog: Dogs?
     private var cache = NSCache<NSString, UIImage>()
     
