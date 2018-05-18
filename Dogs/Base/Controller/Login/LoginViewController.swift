@@ -28,7 +28,11 @@ class LoginViewController: UIViewController, LoginLoadContent {
     
     // MARK: IBAction
     @IBAction func loginAction(_ sender: Any) {
-        validateEmail(email: emailTextField.text ?? "")
+        if Reachability.isConnectedToNetwork() {
+            validateEmail(email: emailTextField.text ?? "")
+        } else {
+            showDefaultAlert(message: "No connetion", completeBlock: nil)
+        }
     }
     
     // MARK: Functions
@@ -47,12 +51,12 @@ class LoginViewController: UIViewController, LoginLoadContent {
         if email.isValidEmail() {
             DispatchQueue.main.async {
                 self.showLoader()
+                self.view.endEditing(true)
             }
             viewModel.login(email: email)
         } else {
             showDefaultAlert(message: "Invalid email", completeBlock: nil)
         }
-        
     }
     
     // MARK: Prepare for segue

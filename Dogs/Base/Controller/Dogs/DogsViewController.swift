@@ -34,11 +34,9 @@ class DogsViewController: UIViewController, DogImageDelegate {
         self.dogsDTO = dogsDTO
     }
     
-    func getDogImageView(image: UIImage?) {
-        guard let img = image else {
-            return
-        }
-        performSegue(withIdentifier: Identifier.segue, sender: DetailDTO(image: img))
+    func getDogImageView(image: Data, categoryName: String) {
+        performSegue(withIdentifier: Identifier.segue,
+                     sender: DetailDTO(image: image, name: categoryName))
     }
 
     // MARK: Prepare for segue

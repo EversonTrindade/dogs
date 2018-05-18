@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-    
     func setRounded() {
         let radius = self.frame.width/2.0
         self.layer.cornerRadius = radius

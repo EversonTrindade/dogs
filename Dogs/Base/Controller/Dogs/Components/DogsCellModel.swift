@@ -21,6 +21,8 @@ protocol DogsCellModelPresentable: class {
     func numberOfRowsInSection() -> Int
     func imageFromCache(identifier: String) -> UIImage?
     func dogDTO(row: Int) -> DogCellDTO
+    func getImageData(row: Int) -> Data?
+
 }
 
 class DogsCellModel: DogsCellModelPresentable {
@@ -92,12 +94,18 @@ class DogsCellModel: DogsCellModelPresentable {
         return DogCellDTO(identifier: dog.object(index: row) ?? "",
                           image: getImage(urlString: dog.object(index: row) ?? ""))
     }
-}
-
-extension DogsCellModel {
+    
+    func getImageData(row: Int) -> Data? {
+        guard let image = dogDTO(row: row).image, let imageData = UIImagePNGRepresentation(image) else {
+            return nil
+        }
+        return imageData
+    }
+    
     func numberOfSections() -> Int {
         return 1
     }
+ 
     func numberOfRowsInSection() -> Int {
         return dog?.list.count ?? 0
     }

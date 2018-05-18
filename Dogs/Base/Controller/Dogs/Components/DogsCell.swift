@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DogImageDelegate: class {
-    func getDogImageView(image: UIImage?)
+    func getDogImageView(image: Data, categoryName: String)
 }
 
 class DogsCell: UITableViewCell, DogsLoadContent {
@@ -28,6 +28,7 @@ class DogsCell: UITableViewCell, DogsLoadContent {
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     func fillCell(token: String, index: Int) {
@@ -52,7 +53,6 @@ class DogsCell: UITableViewCell, DogsLoadContent {
             for cell in collection.visibleCells {
                 if let dogCell = cell as? DogCell, dogCell.identifier == identifier {
                     dogCell.setImage(with: self.viewModel.imageFromCache(identifier: identifier ?? ""))
-                    self.collectionView.reloadData()
                 }
             }
         }
@@ -83,6 +83,7 @@ extension DogsCell: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        dogImageDelegate?.getDogImageView(image: viewModel.dogDTO(row: indexPath.row).image)
+        dogImageDelegate?.getDogImageView(image: viewModel.getImageData(row: indexPath.row) ?? Data(),
+                                          categoryName: categoryLbl.text ?? "")
     }
 }

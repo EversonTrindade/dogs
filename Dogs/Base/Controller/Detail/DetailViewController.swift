@@ -9,17 +9,27 @@
 import UIKit
 
 struct DetailDTO {
-    var image = UIImage()
+    var image: Data?
+    var name = ""
 }
 
 class DetailViewController: UIViewController {
-    @IBOutlet weak var dogImage: UIImageView!
+    
+    @IBOutlet weak var dogImg: UIImageView!
+    
+    var image: Data?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let image = self.image else {
+            return
+        }
+        dogImg.image = UIImage(data: image)
     }
     
-    func fill(dto: DetailDTO) {
-        dogImage.image = dto.image
+    func fill(dto: DetailDTO?) {
+        self.image = dto?.image
+        
+        navigationItem.title = dto?.name.uppercased()
     }
 }

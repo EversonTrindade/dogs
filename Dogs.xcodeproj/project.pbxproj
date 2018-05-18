@@ -32,6 +32,7 @@
 		4069F01320ADDF88001B564F /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F01220ADDF88001B564F /* Array+Extension.swift */; };
 		4069F01620ADFF56001B564F /* DogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F01520ADFF56001B564F /* DogCell.swift */; };
 		4069F01820AE0D43001B564F /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069F01720AE0D43001B564F /* Image+Extension.swift */; };
+		408A0B8C20AE8338002D2F14 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A0B8B20AE8338002D2F14 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		4069F01220ADDF88001B564F /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		4069F01520ADFF56001B564F /* DogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCell.swift; sourceTree = "<group>"; };
 		4069F01720AE0D43001B564F /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		408A0B8B20AE8338002D2F14 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		4069EFE120ACB338001B564F /* Other Files */ = {
 			isa = PBXGroup;
 			children = (
+				408A0B8B20AE8338002D2F14 /* Reachability.swift */,
 				4069F00620ACBCFD001B564F /* Extensions */,
 				4069EFCD20ACB212001B564F /* Info.plist */,
 				4069EFC820ACB212001B564F /* Assets.xcassets */,
@@ -384,6 +387,7 @@
 				4069EFF720ACBA10001B564F /* DogsViewController.swift in Sources */,
 				4069EFF320ACB9E8001B564F /* LoginViewController.swift in Sources */,
 				4069EFE920ACB6FF001B564F /* BaseAPI.swift in Sources */,
+				408A0B8C20AE8338002D2F14 /* Reachability.swift in Sources */,
 				4069F01120ADDB07001B564F /* DogsCellModel.swift in Sources */,
 				4069EFF920ACBA21001B564F /* DogsViewModel.swift in Sources */,
 				4069F00120ACBAAE001B564F /* DogsInteractor.swift in Sources */,
